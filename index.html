@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Greeting</title>
+  </head>
+
+  <body>
+    <p id="greeting"></p>
+
+    <script>
+      const name = prompt("what's your name?");
+      const paragraph = document.getElementById("greeting");
+      paragraph.textContent = "Welcome, " + name;
+    </script>
+
+    <input type="number" id="number1" placeholder="Enter first number" />
+    <input type="number" id="number2" placeholder="Enter second number" />
+    <br />
+    <button id="sumButton">Sum</button>
+    <p id="result">The result is</p>
+
+    <script>
+      console.log("Script loaded");
+      const number1 = document.getElementById("number1");
+      const number2 = document.getElementById("number2");
+      const button = document.getElementById("sumButton");
+      const resultParagraph = document.getElementById("result");
+
+      button.addEventListener("click", function () {
+        const a = Number(number1.value);
+        const b = Number(number2.value);
+        const result = a + b;
+
+        resultParagraph.textContent = "The result is " + result;
+      });
+    </script>
+  </body>
+</html>
